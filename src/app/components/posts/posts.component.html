@@ -1,0 +1,9 @@
+<article class="post" >
+    <img class="imagen" src="{{post.imagen.data.attributes.formats.small.url}}" alt="imagen posts" >
+    <div class="contenido">
+        <h3>{{post.titulo}}</h3>
+        <p class="fecha">{{post.publishedAt | fecha }}</p>
+        <p class="resumen" >{{post.contenido}}</p>
+        <a class="enlace" [routerLink]="['/blog',post.url]">Leer Post</a>
+    </div>
+</article>

@@ -1,0 +1,16 @@
+<main class="contenedor">
+    <h2 class="heading" >Nuestra Colección</h2>
+    <div class="guitarras-grid">
+        <app-guitarra *ngFor="let guitar of services.guitarras" [data]="guitar" ></app-guitarra>
+    </div>
+</main>
+
+<app-curso [data]="services.curso" *ngIf="services.curso != ''"></app-curso>
+
+<section class="contenedor">
+    <h2 class="heading" >Blog</h2>
+    <div class="blog">
+        <app-posts *ngFor="let post of services.posts" [post]="post.attributes" ></app-posts>
+    </div>
+</section>
+

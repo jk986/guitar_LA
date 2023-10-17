@@ -1,0 +1,6 @@
+<main class="contenedor" >
+    <h2 class="heading">Blog</h2>
+    <div class="blog">
+        <app-posts *ngFor="let post of posts" [post]="post.attributes" ></app-posts>
+    </div>
+</main>

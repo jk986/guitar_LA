@@ -1,0 +1,36 @@
+<main class="contenedor">
+    <h1 class="heading">Carrito de compras</h1>
+    
+    <div class="contenido">
+        <div class="carrito">
+
+            <h2>Articulos</h2>
+            <div class="producto" *ngFor="let item of itemsCar" >
+                <div>
+                    <img src="{{item.imagen}}" alt="{{'image de '+item.nombre}}">
+                </div>
+                <div>
+                    <p class="nombre">{{item.nombre}}</p>
+                    <p  >Cantidad: </p>
+                    <select class="select" name="{{item.id}}" id="{{item.id}}" [(ngModel)]="item.amount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <p class="precio">$ <span>{{item.precio}}</span></p>
+                    <p class="subtotal">Subtotal: $ <span>{{item.precio*item.amount}}</span></p>
+                </div>
+                <button type="button" class="btn_eliminar" (click)="eliminarItem(item.id)">X</button>
+            </div>
+        </div>
+        
+        <aside class="resumen">
+            <h3>Resumen del pedido</h3>
+            <p>Total a pagar: ${{total}}</p>
+        </aside>
+    </div>
+    
+</main>

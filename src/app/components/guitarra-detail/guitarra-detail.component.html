@@ -1,0 +1,23 @@
+<main class="contenedor guitarra">
+    <img class="imagen" src="{{guitar.imagen}}" alt="imagen guitarra">
+    <div class="contenido">
+        <h3>{{guitar.nombre}}</h3>
+        <p class="texto">{{guitar.descrip}}</p>
+        <p class="precio">${{guitar.precio}}</p>
+
+        <form class="formulario" (submit)="handleSubmit($event)">
+            <label for="amount">Cantidad:</label>
+            
+            <select name="amount" id="amount" [(ngModel)]="amount">
+                <option value="0">-- Seleccione --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            
+            <input type="submit" name="add" id="add" value="Añadir al carrito">
+        </form>
+    </div>
+</main>

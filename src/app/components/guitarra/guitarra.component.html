@@ -1,0 +1,9 @@
+<div class="guitarra" >
+    <img src="{{guitarra.imagen}}" alt="imagen de guitarra">
+    <div class="contenido">
+        <h3 >{{guitarra.nombre}}</h3>
+        <p class="descripcion" >{{guitarra.descrip}}</p>
+        <p class="precio" >${{guitarra.precio}}</p>
+        <a class="enlace" [routerLink]="['/guitarras',guitarra.url]">Ver Producto</a>
+    </div>
+</div>
