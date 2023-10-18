@@ -1,3 +1,3 @@
 export const environment = {
-    API_URL:'http://localhost:1337/api'
+    API_URL:'https://guitarla-db.onrender.com/api'
 };
